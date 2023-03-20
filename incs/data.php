@@ -4,6 +4,10 @@ $field = [
         'field_name' => 'Email',
         'require' => TRUE,
     ],
+    'password' => [
+        'field_name' => 'Password',
+        'require' => TRUE,
+    ],
     'address' => [
         'field_name' => 'Address',
         'require' => 0,

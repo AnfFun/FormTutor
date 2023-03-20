@@ -17,5 +17,15 @@ function load($data)
     return $data;
 }
 
-function validate($data){}
+function validate($data)
+{
+    $errors = '';
+    foreach ($data as $k => $v) {
+        if ($data[$k]['require'] && empty($data[$k]['value'])) {
+            $errors .= '<li>' . "Field is empty - " . $data[$k]['field_name'] . '</li>';
+        };
+    }
+    return $errors;
+
+}
 
